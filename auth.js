@@ -44,7 +44,7 @@ let loginUser = ()=>{
 
     signInWithEmailAndPassword(auth, email, password).then((data)=>{
         finduser(data.user.email)
-        location.assign("../html/pricing.html")
+        location.assign("./pricing.html")
         document.getElementById("login-success").style.display = "block"
     }).catch(e=>{
         if(e.code == "auth/user-not-found"){
